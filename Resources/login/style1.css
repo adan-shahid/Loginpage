@@ -1,3 +1,4 @@
+
 /*style.css*/
 body {
     display: flex;
@@ -22,7 +23,7 @@ body {
 }
 
 h1 {
-    color: #4CAF50;
+    color: #1b1b1b;
 }
 
 label {
@@ -53,7 +54,7 @@ button {
     border: none;
     color: white;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #1b1b1b;
     width: 100%;
     font-size: 16px;
 }
@@ -85,7 +86,7 @@ body {
 }
 
 .main h2 {
-    color: #4caf50;
+    color:#1b1b1b;
     margin-bottom: 20px;
 }
 
@@ -112,9 +113,11 @@ button[type="submit"] {
     padding: 15px;
     border-radius: 10px;
     border: none;
-    background-color: #4caf50;
+    background-color: #1b1b1b;
     color: white;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
 }
+
+
