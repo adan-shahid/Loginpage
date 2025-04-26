@@ -1,12 +1,17 @@
 from django.shortcuts import render, HttpResponse
+from web.forms import Inputform
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'main.html')
+    return render(request, 'web/index.html')
 
 def loginPage(request):
-    return render(request, 'login.html')
+    form = Inputform()
+    context = {
+        'form': form
+    }
+    return render(request, 'web/login.html', context)
 
 def signupPage(request):
-    return render(request,'signup.html')
+    return render(request,'web/register.html')
