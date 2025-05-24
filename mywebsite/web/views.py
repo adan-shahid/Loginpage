@@ -1,5 +1,5 @@
-from django.shortcuts import render, HttpResponse, HttpResponseRedirect
-from web.forms import Inputform
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect
+from web.forms import loginForm
 
 # Create your views here.
 
@@ -7,15 +7,16 @@ def home(request):
     return render(request, 'web/index.html')
 
 def loginPage(request):
-    form = Inputform()
+    form = loginForm()
     
     if request.method == "POST":
 
-        form = Inputform(request.POST)
+        login_form = form(request.POST)
         
-        if form.is_valid():
-            user = form.save()
-            
+        if login_form.is_valid():
+            form.save()
+            return redirect('web/index.html')
+                
             
     context = {'form': form}
     return render(request, 'web/login.html', context)

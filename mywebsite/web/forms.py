@@ -1,8 +1,8 @@
 from django import forms
+from .models import loginForm
 
-class Inputform(forms.Form):
-    first_name = forms.CharField(max_length=200)
-    last_name = forms.CharField(max_length=200)
-    email = forms.EmailField(max_length=200)
-    password = forms.PasswordInput()
+class partialloginform(forms.ModelForm):
+    class Meta:
+        model = loginForm()
+        fields = '__all__'
     

@@ -2,7 +2,8 @@
 
 <h2>Welcome to login page.</h2>
 <h3>Enter your Login Credentials</h3>
-<form action="", method="POST">
+
+<form method="POST">
     {% csrf_token %}
     {{form.as_p}}
 
